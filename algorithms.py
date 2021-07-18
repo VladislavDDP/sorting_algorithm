@@ -35,7 +35,8 @@ def min_element_sort(arr):
 def testing():
     start = time.perf_counter()
     # declare an unsorted array
-    unsorted = [3, 3, 6, 6, 23, 12, 2, 6, 11, 87, 4, 6, 1, 1, 1, 99, 4, 5, 32, 22, 2, 90]
+    random_array = [randint(1, 1000) for i in range(5000)]
+    unsorted = random_array.copy()
     print(quick_sort(unsorted))
     end = time.perf_counter()
 
@@ -48,7 +49,7 @@ def testing():
 
     start = time.perf_counter()
     # declare an unsorted array
-    unsort = [3, 3, 6, 6, 23, 12, 2, 6, 11, 87, 4, 6, 1, 1, 1, 99, 4, 5, 32, 22, 2, 90]
+    unsort = random_array.copy()
     print(min_element_sort(unsort))
     end = time.perf_counter()
 
