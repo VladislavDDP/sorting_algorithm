@@ -1,4 +1,5 @@
 from random import randint
+import time
 
 # it is a quick function sort
 # @ params: unsorted array
@@ -31,20 +32,32 @@ def min_element_sort(arr):
 
     return sorted
 
+def testing():
+    start = time.perf_counter()
+    # declare an unsorted array
+    unsorted = [3, 3, 6, 6, 23, 12, 2, 6, 11, 87, 4, 6, 1, 1, 1, 99, 4, 5, 32, 22, 2, 90]
+    print(quick_sort(unsorted))
+    end = time.perf_counter()
 
-# declare an unsorted array
-unsorted = [3, 3, 6, 6, 23, 12, 2, 6, 11, 87]
-print(quick_sort(unsorted))
+    # RESULT for quick sort
+    print(f'Time of quick sort = {end - start:.7f}')
 
-# test with strings
-unsorted_names = ['Vlad', 'Bob', 'Nikita', 'Lesha', 'Rodik']
-print(quick_sort(unsorted_names))
+    # test with strings
+    unsorted_names = ['Vlad', 'Bob', 'Nikita', 'Lesha', 'Rodik']
+    # print(quick_sort(unsorted_names))
+
+    start = time.perf_counter()
+    # declare an unsorted array
+    unsort = [3, 3, 6, 6, 23, 12, 2, 6, 11, 87, 4, 6, 1, 1, 1, 99, 4, 5, 32, 22, 2, 90]
+    print(min_element_sort(unsort))
+    end = time.perf_counter()
+
+    # RESULT for min element
+    print(f'Time of quick sort = {end - start:.7f}')
+
+    # test with strings
+    unsort_names = ['Vlad', 'Bob', 'Nikita', 'Lesha', 'Rodik']
+    # print(min_element_sort(unsort_names))
 
 
-# declare an unsorted array
-unsort = [3, 3, 6, 6, 23, 12, 2, 6, 11, 87]
-print(min_element_sort(unsort))
-
-# test with strings
-unsort_names = ['Vlad', 'Bob', 'Nikita', 'Lesha', 'Rodik']
-print(min_element_sort(unsort_names))
+testing()
