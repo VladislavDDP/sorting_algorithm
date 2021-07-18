@@ -23,14 +23,15 @@ def quick_sort(arr):
 # @ params: unsorted array
 # @ returns sorted array (if works)
 def min_element_sort(arr):
-    sorted = []
+    sorted_array = []
 
     while len(arr):
         min_element = min(arr)
-        sorted.append(min_element)
         arr.remove(min_element)
+        sorted_array.append(min_element)
 
-    return sorted
+    return sorted_array
+
 
 def testing():
     start = time.perf_counter()
