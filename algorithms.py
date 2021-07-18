@@ -1,7 +1,10 @@
+from random import randint
+
 def quick_sort(arr):
+    random_number = randint(0, len(arr) - 1)
     left = []
     right = []
-    main = 0
+    main = arr[random_number]
     return quick_sort(left) + [main] + quick_sort(right)
 
 
