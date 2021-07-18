@@ -21,3 +21,7 @@ def quick_sort(arr):
 # declare an unsorted array
 unsorted = [3, 3, 6, 6, 23, 12, 2, 6, 11, 87]
 print(quick_sort(unsorted))
+
+# test with strings
+unsorted_names = ['Vlad', 'Bob', 'Nikita', 'Lesha', 'Rodik']
+print(quick_sort(unsorted_names))
