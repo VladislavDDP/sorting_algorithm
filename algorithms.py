@@ -2,9 +2,9 @@ from random import randint
 
 def quick_sort(arr):
     random_number = randint(0, len(arr) - 1)
-    left = []
-    right = []
     main = arr[random_number]
+    left = [elem for elem in arr if elem != main and elem < main]
+    right = [elem for elem in arr if elem != main and elem > main]
     return quick_sort(left) + [main] + quick_sort(right)
 
 
