@@ -16,7 +16,18 @@ class List:
             self.head = node
 
     def remove_item(self, value) -> None:
-        pass
+        node = self.head
+        previous = node
+        while node:
+            if node.value == value:
+                if node == self.head:
+                    self.head = node.next
+                else:
+                    previous.next = node.next
+                node = None
+            else:
+                previous = node
+                node = node.next
 
     def print_items(self) -> None:
         node = self.head
@@ -30,6 +41,7 @@ list.add_item(1)
 list.add_item(2)
 list.add_item(3)
 list.add_item(4)
+list.remove_item(4)
 
 print('Printing items from the list: ')
 list.print_items()
