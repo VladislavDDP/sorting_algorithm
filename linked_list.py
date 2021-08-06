@@ -1,10 +1,14 @@
 class Node:
+    """ class for creating element of single linked list """
+
     def __init__(self, value, next=None) -> None:
         self.value = value
         self.next = next
 
 
 class List:
+    """ class for creating a single linked list """
+
     def __init__(self) -> None:
         self.head = None
 
